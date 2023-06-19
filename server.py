@@ -26,8 +26,6 @@ def predict(wav_path):
 
 app = FastAPI()
 
-# app.mount("/", StaticFiles(directory="static", html=True), name="index")
-
 @app.post("/predict")
 async def app_pred(file: UploadFile = File(...)):
     contents = await file.read()
@@ -39,3 +37,5 @@ async def app_pred(file: UploadFile = File(...)):
 @app.put("/change_model")
 async def change_model():
     pass
+
+app.mount("/", StaticFiles(directory="static", html=True), name="index")
