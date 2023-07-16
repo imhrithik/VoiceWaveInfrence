@@ -38,4 +38,5 @@ async def app_pred(file: UploadFile = File(...)):
 async def change_model():
     pass
 
+app.mount("/static", StaticFiles(directory="static"), name="static")
 app.mount("/", StaticFiles(directory="static", html=True), name="index")

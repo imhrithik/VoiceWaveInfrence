@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Hello World
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Speach_To_Text</title>
+        <link rel="stylesheet" href="./static/index.css">
+        <script src="./static/index.js" defer></script>
+    </head>
+
+    <body>
+        <div class="card">
+            <div class="top">
+                <p>Drap and drop file</p>
+                <button type="button">Upload</button>
+            </div>
+            <form action="/upload" method="post" class="">
+                <span class="inner">Drag and drop file here or <span class="select">Browse</span></span>
+                <input name="file" type="file" class="file" accept=".mp3,.wav" multiple/>
+            </form>
+            <div class="container">
+            </div>
+        </div>
+    </body>
 </html>
