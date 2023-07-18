@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Speach_To_Text</title>
-        <link rel="stylesheet" href="./static/index.css">
-        <script src="./static/index.js" defer></script>
-    </head>
 
-    <body>
-        <div class="card">
-            <div class="top">
-                <p>Drap and drop file</p>
-                <button type="button">Upload</button>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/index.css">
+    <title>Speech to text</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div class="input-bx">
+                <h2 class="upload-area-title">Upload File</h2>
+                <form action="">
+                    <input type="file" id="upload" accept=".mp3,.wav" hidden>
+                    <label for="upload" class="uploadlabel">
+                        <span><i class="fa fa-cloud-upload"></i></span>
+                        <p>Click To Upload</p>
+                    </label>
+                </form>
+             
             </div>
-            <form action="/upload" method="post" class="">
-                <span class="inner">Drag and drop file here or <span class="select">Browse</span></span>
-                <input name="file" type="file" class="file" accept=".mp3,.wav" multiple/>
-            </form>
-            <div class="container">
+            <div id="filewrapper">
+                <h3 class="uploaded">Uploaded Documents</h3>
             </div>
+            <button class="sky-blue-button" id="convert">Convert</button>
+            <textarea id="myTextarea" rows="4" cols="60"></textarea>
         </div>
-    </body>
+    </div>
+    <script src="index.js"></script>
+</body>
+
 </html>
