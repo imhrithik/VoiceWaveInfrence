@@ -16,21 +16,23 @@
             <div class="input-bx">
                 <h2 class="upload-area-title">Upload File</h2>
                 <form action="">
-                    <input type="file" id="upload" accept=".mp3,.wav" hidden>
+                    <input type="file" id="upload" accept=".mp3,.wav" multiple="false" hidden>
                     <label for="upload" class="uploadlabel">
                         <span><i class="fa fa-cloud-upload"></i></span>
                         <p>Click To Upload</p>
                     </label>
                 </form>
-             
+                <div id="filewrapper">
+                    <h3 class="uploaded">Uploaded Documents</h3>
+                </div>
             </div>
-            <div id="filewrapper">
-                <h3 class="uploaded">Uploaded Documents</h3>
+            <div class="convert">
+                <button class="sky-blue-button" id="convert">Convert</button>
             </div>
-            <button class="sky-blue-button" id="convert">Convert</button>
-            <textarea id="myTextarea" rows="4" cols="60"></textarea>
+            <textarea id="myTextarea" rows="4" cols="60" placeholder="Your transcription will appear here..."></textarea>
         </div>
     </div>
+    
     <script src="index.js"></script>
 </body>
 

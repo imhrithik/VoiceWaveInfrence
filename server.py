@@ -6,8 +6,8 @@ import numpy as np
 from fastapi import FastAPI, File, UploadFile
 from fastapi.staticfiles import StaticFiles
 
-configs = BaseModelConfigs.load("/home/bhavesh/Desktop/VoiceWave/inference/Models/CRNN-01/configs.yaml")
-model = WavToTextModel(model_path="/home/bhavesh/Desktop/VoiceWave/inference/Models/CRNN-01/model.onnx", char_list=configs.vocab, force_cpu=False)
+configs = BaseModelConfigs.load("C:/Users/Rahul gupta/Desktop/New folder/VoiceWaveInfrence/Models/Models/CRNN-01/configs.yaml")
+model = WavToTextModel(model_path="C:/Users/Rahul gupta/Desktop/New folder/VoiceWaveInfrence/Models/Models/CRNN-01/model.onnx", char_list=configs.vocab, force_cpu=False)
 
 def pad_spectrogram(spectrogram):
     padded_spectrogram = np.pad(spectrogram, ((configs.max_spectrogram_length - spectrogram.shape[0], 0),(0,0)), mode="constant", constant_values=0)
